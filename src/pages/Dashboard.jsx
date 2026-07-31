@@ -5,7 +5,7 @@ function Dashboard({ links, onOpen, onDelete, onEdit, onToggleFavorite, onReorde
 
   return (
     <div className="page">
-      <h1>Welcome back</h1>
+      <h1>Welcome back 👋</h1>
       <p>Your saved links, one click away.</p>
 
       {favorites.length > 0 && (
