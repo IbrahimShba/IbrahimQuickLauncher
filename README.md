@@ -57,7 +57,28 @@ https://ibrahim-quick-launcher.vercel.app
 
 ## Screenshots
 
-*(Add one screenshot per page here before submitting — Dashboard, Add Link, All Links, Categories, Stats, Settings)*
+## Screenshots
+
+**Dashboard**
+![Dashboard](screenshots/dashboard.png)
+
+**Add Link**
+![Add Link](screenshots/add-link.png)
+
+**All Links**
+![All Links](screenshots/all-links.png)
+
+**Categories**
+![Categories](screenshots/categories.png)
+
+**Stats**
+![Stats](screenshots/stats.png)
+
+**Settings — Light Mode**
+![Settings Light](screenshots/settings-light.png)
+
+**Settings — Dark Mode**
+![Settings Dark](screenshots/settings-dark.png)
 
 ## Author
 
