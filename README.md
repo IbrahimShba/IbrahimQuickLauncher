@@ -53,7 +53,7 @@ npm run build
 
 ## Live Demo
 
-*(Add your deployed Vercel/Netlify link here once deployed)*
+https://ibrahim-quick-launcher.vercel.app
 
 ## Screenshots
 
