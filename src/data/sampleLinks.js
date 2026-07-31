@@ -4,15 +4,15 @@ const sampleLinks = [
     title: "ChatGPT",
     url: "https://chat.openai.com",
     category: "AI Tools",
-    clicks: 12,
-    favorite: true,
+    clicks: 0,
+    favorite: false,
   },
   {
     id: 2,
     title: "YouTube",
     url: "https://youtube.com",
     category: "Entertainment",
-    clicks: 30,
+    clicks: 0,
     favorite: false,
   },
   {
@@ -20,8 +20,8 @@ const sampleLinks = [
     title: "Google",
     url: "https://google.com",
     category: "Search",
-    clicks: 20,
-    favorite: false,
+    clicks: 0,
+    favorite: true,
   },
 ];
 
