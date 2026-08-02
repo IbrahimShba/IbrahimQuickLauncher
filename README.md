@@ -1,49 +1,49 @@
 # IbrahimQuickLauncher
 
-A quick-access web app for saving and organizing frequently visited websites. Add a URL, and the app automatically fetches the site's icon and displays it as a clickable tile — like a personal home screen for your favorite sites.
+A quick-access dashboard for the websites I visit most. I got tired of digging through browser bookmarks, so I built this instead — I add a URL, it grabs the site's icon automatically, and shows it as a clickable tile I can open in one click.
 
 Built for CSCI390: Web Programming.
 
 ## Features
 
-- **Dashboard** — favorites section (if any) + all links as cards
-- **Add Link** — save a new site with title, URL, and category (auto-adds `https://` if missing; pick an existing category or create a new one)
+- **Dashboard** — favorites section (if I have any) + all my links as cards
+- **Add Link** — save a site with a title, URL, and category (auto-adds `https://` if I forget it; I can pick an existing category or make a new one)
 - **All Links** — search bar + category filter chips
-- **Categories** — each category shown as a card with a link count; click one to jump to All Links pre-filtered
-- **Stats** — total links, total opens, most-opened link, and a live breakdown of links per category
+- **Categories** — each category shown as a card with a link count; click one to jump straight to a filtered All Links view
+- **Stats** — total links, total opens, most-opened link, and a breakdown of links per category
 - **Settings** —
-  - Light/dark theme toggle (applies to the whole app)
+  - Light/dark theme toggle
   - Custom background image upload
-  - Export your links + theme + background as a backup file, and import it back
-  - "Reset Everything" — restores the 3 starting demo links with stats cleared
-- Drag-and-drop reordering — grab the grip handle on any card to reorder your links
-- Every category gets a consistent, auto-generated color across the whole app
-- Favicons fetched live via Google's public favicon service — no API key needed
-- All data (links, theme, background) saved automatically in the browser's local storage — no backend required
-- Fully responsive — collapses into a hamburger menu under 640px width
+  - Export my links + theme + background as a backup file, and import it back later
+  - "Reset Everything" — wipes it back to the 3 starting demo links
+- Drag-and-drop reordering — grab the grip handle on a card to move it around
+- Every category gets its own consistent color automatically, across the whole app
+- Favicons pulled live from Google's free favicon service, no API key needed
+- Everything (links, theme, background) is saved automatically in the browser — no backend, no database
+- Responsive — collapses into a hamburger menu on small screens
 
 ## Tech Stack
 
 - React (built with Vite)
-- Plain CSS with CSS variables (custom design system, no external UI framework)
-- Browser `localStorage` for persistence (no backend/database)
+- Plain CSS with CSS variables — no Bootstrap/Tailwind, wrote the design system myself
+- Browser `localStorage` for saving data — no backend
 
 ## Setup Instructions
 
-1. Clone the repository:
-   ```bash
+1. Clone the repo:
+```bash
    git clone <your-repo-url>
    cd IbrahimQuickLauncher
-   ```
+```
 2. Install dependencies:
-   ```bash
+```bash
    npm install
-   ```
-3. Run the development server:
-   ```bash
+```
+3. Run it locally:
+```bash
    npm run dev
-   ```
-4. Open the local link shown in the terminal (usually `http://localhost:5173`) in your browser.
+```
+4. Open the link the terminal gives you (usually `http://localhost:5173`).
 
 ## Build for Production
 
@@ -54,8 +54,6 @@ npm run build
 ## Live Demo
 
 https://ibrahim-quick-launcher.vercel.app
-
-## Screenshots
 
 ## Screenshots
 
@@ -82,4 +80,4 @@ https://ibrahim-quick-launcher.vercel.app
 
 ## Author
 
-Ibrahim Shb — CSCI390 Web Programming
+Ibrahim Shbaklo — CSCI390 Web Programming
