@@ -9,6 +9,7 @@ function LinkCard({ link, allLinks, onOpen, onDelete, onEdit, onToggleFavorite, 
   const [newCategory, setNewCategory] = useState("");
   const [isNewCategory, setIsNewCategory] = useState(false);
 
+  // building the favicon url from the domain
   const domain = link.url.replace(/^https?:\/\//, "").split("/")[0];
   const faviconUrl = `https://www.google.com/s2/favicons?domain=${domain}&sz=64`;
 
@@ -32,14 +33,13 @@ function LinkCard({ link, allLinks, onOpen, onDelete, onEdit, onToggleFavorite, 
     if (confirmed) onDelete(link.id);
   };
 
-  // Drag-and-drop: the small grip handle starts the drag,
-  // the whole card acts as the drop target when you release over it.
+  // grip handle starts the drag, card itself is the drop zone
   const handleDragStart = (e) => {
     e.dataTransfer.setData("text/plain", link.id);
   };
 
   const handleDragOver = (e) => {
-    e.preventDefault(); // required, or the browser blocks dropping
+    e.preventDefault(); // needed or the browser won't allow dropping
     setIsDragOver(true);
   };
 
@@ -139,6 +139,7 @@ function LinkCard({ link, allLinks, onOpen, onDelete, onEdit, onToggleFavorite, 
   );
 }
 
+// gives each category the same color everywhere, based on its name
 export function categoryColor(category) {
   const palette = ["#5B6EF5", "#FF7A50", "#28C7A6", "#F5B94F", "#B565F0", "#4FB6F5"];
   let hash = 0;

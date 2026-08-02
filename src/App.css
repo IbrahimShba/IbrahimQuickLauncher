@@ -1,6 +1,4 @@
-/* ===================================================
-   DESIGN TOKENS
-=================================================== */
+/* design tokens */
 :root {
   --bg: #0b0e14;
   --surface: #141822;
@@ -18,8 +16,7 @@
   --radius: 14px;
 }
 
-/* Light theme — applied to the WHOLE page via <html class="light">,
-   so background, text, and every component switch together. */
+/* light mode overrides, applied on <html class="light"> */
 :root.light {
   --bg: #f5f6fa;
   --surface: #ffffff;
@@ -41,8 +38,7 @@ body {
   transition: background 0.25s ease, color 0.25s ease;
 }
 
-/* Full-page background wrapper — covers 100% of the viewport,
-   so theme color / background image never leaves gaps at the edges. */
+/* covers the full screen so bg color/image never leaves gaps */
 .app-wrapper {
   min-height: 100vh;
   background: var(--bg);
@@ -59,9 +55,7 @@ main {
   margin-top: 28px;
 }
 
-/* ===================================================
-   NAVBAR
-=================================================== */
+/* navbar */
 .navbar {
   border-bottom: 1px solid var(--border);
   padding-bottom: 16px;
@@ -124,9 +118,7 @@ main {
   border-bottom: 2px solid var(--accent);
 }
 
-/* ===================================================
-   PAGE HEADERS
-=================================================== */
+/* page headers */
 .page h1 {
   font-family: var(--font-display);
   font-size: 26px;
@@ -154,9 +146,7 @@ main {
   padding: 30px 0;
 }
 
-/* ===================================================
-   LINK CARD GRID (Dashboard + All Links)
-=================================================== */
+/* link card grid - used on dashboard + all links */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -262,9 +252,7 @@ main {
   font-size: 13px;
 }
 
-/* ===================================================
-   ADD LINK FORM
-=================================================== */
+/* add link form */
 .form {
   display: flex;
   flex-direction: column;
@@ -330,9 +318,7 @@ main {
   flex: 1;
 }
 
-/* ===================================================
-   ALL LINKS — search + filter chips
-=================================================== */
+/* all links page - search + filter chips */
 .search-input {
   width: 100%;
   max-width: 420px;
@@ -383,9 +369,7 @@ main {
   color: #fff;
 }
 
-/* ===================================================
-   CATEGORIES PAGE
-=================================================== */
+/* categories page */
 .category-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
@@ -422,9 +406,7 @@ main {
   color: var(--text-dim);
 }
 
-/* ===================================================
-   STATS PAGE
-=================================================== */
+/* stats page */
 .stats-row {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -501,9 +483,7 @@ main {
   text-align: right;
 }
 
-/* ===================================================
-   SETTINGS PAGE
-=================================================== */
+/* settings page */
 .settings-row {
   display: flex;
   gap: 10px;
@@ -526,9 +506,7 @@ main {
   display: block;
 }
 
-/* ===================================================
-   RESPONSIVE — mobile breakpoint
-=================================================== */
+/* mobile - collapses nav into a hamburger */
 @media (max-width: 640px) {
   .app {
     padding: 16px 14px 40px;

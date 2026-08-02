@@ -14,11 +14,13 @@ function App() {
   const [currentPage, setCurrentPage] = useState("Dashboard");
   const [activeCategory, setActiveCategory] = useState(null);
 
+  // all link data + actions come from one shared hook
   const { links, addLink, deleteLink, editLink, toggleFavorite, openLink, reorderLinks, replaceAllLinks } = useLinks();
 
   const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light");
   const [bgImage, setBgImage] = useState(() => localStorage.getItem("bgImage") || "");
 
+  // applying the theme class on <html> so it affects the whole page, not just one div
   useEffect(() => {
     localStorage.setItem("theme", theme);
     document.documentElement.classList.toggle("light", theme === "light");
@@ -29,10 +31,11 @@ function App() {
   }, [bgImage]);
 
   function goToPage(page) {
-    if (page === "All Links") setActiveCategory(null);
+    if (page === "All Links") setActiveCategory(null); // clear old filter when navigating here directly
     setCurrentPage(page);
   }
 
+  // brings everything back to a clean starting state
   function resetAll() {
     const freshLinks = sampleLinks.map((l) => ({ ...l, clicks: 0, favorite: false }));
     replaceAllLinks(freshLinks);
@@ -40,6 +43,7 @@ function App() {
     setBgImage("");
   }
 
+  // dark overlay so text stays readable over any background image
   const wrapperStyle = bgImage
     ? {
         backgroundImage: `linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url(${bgImage})`,

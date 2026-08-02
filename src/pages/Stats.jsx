@@ -3,6 +3,7 @@ import { categoryColor } from "../components/LinkCard";
 function Stats({ links }) {
   const totalLinks = links.length;
   const totalClicks = links.reduce((sum, l) => sum + (l.clicks || 0), 0);
+  // no "most opened" until something actually gets a click
   const mostClicked =
     totalClicks > 0 && links.length
       ? links.reduce((top, l) => ((l.clicks || 0) > (top.clicks || 0) ? l : top), links[0])

@@ -35,7 +35,7 @@ function Settings({ theme, setTheme, bgImage, setBgImage, links, replaceAllLinks
     reader.onload = () => {
       try {
         const imported = JSON.parse(reader.result);
-        // Supports both a full backup ({links, theme, bgImage}) and an older links-only file
+        // works with old links-only backups too, not just the new full format
         const importedLinks = Array.isArray(imported) ? imported : imported.links;
         if (!Array.isArray(importedLinks)) throw new Error("Invalid file");
 

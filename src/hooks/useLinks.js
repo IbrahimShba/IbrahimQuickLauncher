@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 import sampleLinks from "../data/sampleLinks";
 
+// all my link data + logic lives here so every page uses the same source
 function useLinks() {
   const [links, setLinks] = useState(() => {
     const saved = localStorage.getItem("links");
     return saved ? JSON.parse(saved) : sampleLinks;
   });
 
+  // saves to localStorage every time links changes
   useEffect(() => {
     localStorage.setItem("links", JSON.stringify(links));
   }, [links]);
@@ -46,7 +48,7 @@ function useLinks() {
     window.open(link.url, "_blank");
   }
 
-  // Moves the dragged link to sit right where it was dropped
+  // puts the dragged link where I dropped it
   function reorderLinks(draggedId, targetId) {
     setLinks((prev) => {
       const draggedIndex = prev.findIndex((l) => l.id === draggedId);
@@ -59,6 +61,7 @@ function useLinks() {
     });
   }
 
+  // used by import + reset
   function replaceAllLinks(newLinks) {
     setLinks(newLinks);
   }

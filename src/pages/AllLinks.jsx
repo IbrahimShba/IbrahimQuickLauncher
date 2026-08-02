@@ -6,6 +6,7 @@ function AllLinks({ links, onOpen, onDelete, onEdit, onToggleFavorite, onReorder
 
   const categories = ["All", ...new Set(links.map((l) => l.category || "Uncategorized"))];
 
+  // has to match both search text and the active category chip
   const filtered = links.filter((link) => {
     const linkCategory = link.category || "Uncategorized";
     const matchesSearch =

@@ -6,7 +6,7 @@ function Navbar({ currentPage, setCurrentPage }) {
 
   function handleSelect(page) {
     setCurrentPage(page);
-    setMenuOpen(false);
+    setMenuOpen(false); // closes the mobile menu after picking a page
   }
 
   return (
@@ -24,6 +24,7 @@ function Navbar({ currentPage, setCurrentPage }) {
         </button>
       </div>
 
+      {/* hamburger menu on small screens */}
       <div className={menuOpen ? "nav-links open" : "nav-links"}>
         {pages.map((page) => (
           <button key={page} className={currentPage === page ? "nav-btn active" : "nav-btn"} onClick={() => handleSelect(page)}>
