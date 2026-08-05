@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import "./Settings.css";
 
 function Settings({ theme, setTheme, bgImage, setBgImage, links, replaceAllLinks, resetAll }) {
   const fileInputRef = useRef(null);

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import LinkCard from "../components/LinkCard";
+import "./AllLinks.css";
 
 function AllLinks({ links, onOpen, onDelete, onEdit, onToggleFavorite, onReorder, activeCategory, setActiveCategory }) {
   const [search, setSearch] = useState("");

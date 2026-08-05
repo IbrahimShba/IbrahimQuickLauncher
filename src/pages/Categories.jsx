@@ -1,4 +1,5 @@
 import { categoryColor } from "../components/LinkCard";
+import "./Categories.css";
 
 function Categories({ links, setActiveCategory, goToAllLinks }) {
   const counts = {};

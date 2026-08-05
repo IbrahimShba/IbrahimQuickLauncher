@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./AddLink.css";
 
 function AddLink({ onAdd, links }) {
   const [title, setTitle] = useState("");

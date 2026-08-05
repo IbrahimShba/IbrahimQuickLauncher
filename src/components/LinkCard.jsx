@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./LinkCard.css";
 
 function LinkCard({ link, allLinks, onOpen, onDelete, onEdit, onToggleFavorite, onReorder }) {
   const [isEditing, setIsEditing] = useState(false);

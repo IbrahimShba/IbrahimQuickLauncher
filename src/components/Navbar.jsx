@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Navbar.css";
 
 function Navbar({ currentPage, setCurrentPage }) {
   const [menuOpen, setMenuOpen] = useState(false);

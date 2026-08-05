@@ -1,4 +1,5 @@
 import { categoryColor } from "../components/LinkCard";
+import "./Stats.css";
 
 function Stats({ links }) {
   const totalLinks = links.length;
