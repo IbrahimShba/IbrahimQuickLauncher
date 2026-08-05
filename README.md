@@ -25,7 +25,7 @@ Built for CSCI390: Web Programming.
 ## Tech Stack
 
 - React (built with Vite)
-- Plain CSS with CSS variables — no Bootstrap/Tailwind, wrote the design system myself
+- Plain CSS with CSS variables — no Bootstrap/Tailwind, wrote the design system myself, split into separate files per page/component
 - Browser `localStorage` for saving data — no backend
 
 ## Setup Instructions
